@@ -41,9 +41,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 To keep things consistent, use the Atom editor ([download here](https://atom.io/)). Once downloaded, you need to install and set up the GitHub and Vue.js plugins. The GitHub plugin will allow you to branch and merge without using the command line, and Vue plugin will give your editor the proper syntax highlighting for `.vue` files.
 
-### GitHub Plugin
+### Git Support
 
-
+The Atom editor comes with VCS (Version Control Software) support. On the bottom righthand side of the editor, you can change your current branch. It likely says "master" when you first clone the project. And by clicking the farthest righthand button on the bottom toolbar, you can open the Git sidebar to view your changes, commit, or make Pull Requests.
 
 ### Vue Plugin
 
@@ -57,6 +57,3 @@ When you start up Atom for the first time, the righthand sidebar has a section f
 npm WARN bootstrap@4.0.0 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
 npm WARN bootstrap@4.0.0 requires a peer of popper.js@^1.12.9 but none is installed. You must install peer dependencies yourself.
 ```
-- 
-
-
