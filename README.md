@@ -16,6 +16,8 @@ npm run dev
 
 ### Build and Test
 
+Use the following commands to build, test, and minify the project for production.
+
 ``` bash
 # build for production with minification
 npm run build
@@ -33,12 +35,11 @@ npm run e2e
 npm test
 ```
 
-
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Editor Setup
 
-To keep things consistent, use the Atom editor ([download here](https://atom.io/)). Once downloaded, you need to install and set up the GitHub and Vue.js plugins. The GitHub plugin will allow you to branch and merge without using the command line, and Vue plugin will give your editor the proper syntax highlighting.
+To keep things consistent, use the Atom editor ([download here](https://atom.io/)). Once downloaded, you need to install and set up the GitHub and Vue.js plugins. The GitHub plugin will allow you to branch and merge without using the command line, and Vue plugin will give your editor the proper syntax highlighting for `.vue` files.
 
 ### GitHub Plugin
 
