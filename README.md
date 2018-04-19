@@ -14,6 +14,10 @@ npm install
 npm run dev
 ```
 
+### Version Control
+
+There is a branch, dev, that should be used as the default branch for all development. The master branch will be our production branch, and we will occasionally check our edits into that branch when appropriate.
+
 ### Build and Test
 
 Use the following commands to build, test, and minify the project for production.
