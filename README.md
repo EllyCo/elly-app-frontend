@@ -16,7 +16,7 @@ npm run dev
 
 ### Version Control
 
-There is a branch, dev, that should be used as the default branch for all development. The master branch will be our production branch, and we will occasionally check our edits into that branch when appropriate. 
+There is a branch, dev, that should be used as the default branch for all development. The master branch will be our production branch, and we will occasionally check our edits into that branch when appropriate.
 
 ### Build and Test
 
