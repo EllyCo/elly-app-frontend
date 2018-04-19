@@ -12,12 +12,11 @@ export default {
   name: 'home',
   data () {
     return {
-        some_key: 'value'
+      some_key: 'value'
     }
   }
 }
 </script>
-
 
 <style scoped>
 

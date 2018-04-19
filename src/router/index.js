@@ -5,11 +5,11 @@ import Router from 'vue-router'
 import settings from '@/components/settings'
 import login from '@/components/login'
 import home from '@/components/home'
+import big_component from '@/components/large_component/big_component'
 
 Vue.use(Router)
 
 export default new Router({
-  history: true,
   routes: [
     {
       path: '/home',
@@ -19,12 +19,17 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: home
+      component: login
     },
     {
       path: '/settings',
       name: 'settings',
       component: settings
+    },
+    {
+      path: '/big_component',
+      name: 'big_component',
+      component: big_component
     }
   ]
 })
