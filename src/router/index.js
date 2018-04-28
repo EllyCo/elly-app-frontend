@@ -9,19 +9,16 @@ import home from '@/components/home'
 Vue.use(Router)
 
 export default new Router({
-  history: true,
   routes: [
     {
       path: '/home',
       name: 'home',
       component: home
-    },
-    {
+    }, {
       path: '/login',
       name: 'login',
-      component: home
-    },
-    {
+      component: login
+    }, {
       path: '/settings',
       name: 'settings',
       component: settings
