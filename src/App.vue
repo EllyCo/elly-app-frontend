@@ -3,7 +3,7 @@
   <div id="app">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top bg-dark">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
       <a href= "/" class="navbar-brand">Elly
       </a>
       <ul class="navbar-nav ml-auto">
