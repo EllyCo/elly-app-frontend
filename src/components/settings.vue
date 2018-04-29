@@ -13,13 +13,12 @@ export default {
   name: 'settings',
   data () {
     return {
-        setting1: 'YES',
-        setting2: 'NO'
+      setting1: 'YES',
+      setting2: 'NO'
     }
   }
 }
 </script>
-
 
 <style scoped>
 
