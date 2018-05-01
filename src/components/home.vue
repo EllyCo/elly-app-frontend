@@ -17,7 +17,7 @@
         <ul class="list-group list-group-flush col-md-12">
 
             <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered his insulin
+                <span class="fa fa-check pull-left"></span> {{info}}
             </button>
             <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
                 <span class="fa fa-check pull-left"></span> Eli delivered insulin
@@ -165,26 +165,26 @@
 
 
 <script>
+const axios = require('axios');
 
 export default {
     name: 'home',
     data() {
         return {
-            some_key: 'value'
+            info: null
         }
+    },
+    mounted () {
+      axios
+        .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then(response => (this.info = response));
     }
 }
 
-function ToggleDeliveredInsulin() {
-
-}
-
-function ToggleCheckedBloodSugar() {
-
-}
-
-function ToggleFeelingLow() {
-
-}
-
+// function ToggleDeliveredInsulin() {
+// }
+// function ToggleCheckedBloodSugar() {
+// }
+// function ToggleFeelingLow() {
+// }
 </script>
