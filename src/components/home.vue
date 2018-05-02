@@ -46,7 +46,7 @@
 
     <!-- Begin class time menu -->
     <button type="button" class="btn btn-light btn-lg active col-lg-3"
-    data-toggle="button">
+    onclick="ToggleCalendar()">
       <i class="fa fa-calendar-alt fa-2x"></i>
     </button>
     <!-- End class time menu -->
@@ -105,6 +105,11 @@ function cleanClickData(rawData) {
       return b.date - a.date
     })
 };
+function ToggleDeliveredInsulin() {isToggleDeliveredInsulin = !isToggleDeliveredInsulin;},
+function ToggleCheckedBloodSugar() { isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;},
+function ToggleFeelingLow() { isToggleFeelingLow = !isToggleFeelingLow; },
+function ToggleCalendar() { calendarToggleCounter++; },
+
 
 
 export default {
@@ -167,12 +172,6 @@ export default {
       }
 
     },
-    ToggleDeliveredInsulin: function() {isToggleDeliveredInsulin = !isToggleDeliveredInsulin;},
-    ToggleCheckedBloodSugar: function() { isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;},
-    ToggleFeelingLow: function() { isToggleFeelingLow = !isToggleFeelingLow; },
-    ToggleCalendar: function() { calendarToggleCounter++; },
-
-
   }
 }
 </script>
