@@ -24,8 +24,8 @@
   <nav class="navbar fixed-bottom navbar-light bg-light col-lg-12" style="width:100%">
 
     <!-- Begin btn-delivered-insulin-->
-    <button type="button" class="btn btn-delivered-insulin btn-lg active col-lg-3"
-    onclick="ToggleDeliveredInsulin()">
+    <button type="button" class="btn btn-delivered-insulin btn-lg active col-lg-3">
+    <a onclick="ToggleDeliveredInsulin()"> </a>
                 <i class="fa fa-check fa-2x"></i>
             </button>
     <!-- End btn-delivered-insulin-->
@@ -46,7 +46,7 @@
 
     <!-- Begin class time menu -->
     <button type="button" class="btn btn-light btn-lg active col-lg-3"
-    onclick="ToggleCalendar()">
+    data-toggle="button">
       <i class="fa fa-calendar-alt fa-2x"></i>
     </button>
     <!-- End class time menu -->
@@ -133,32 +133,39 @@ export default {
       .then(response => xml.parseString(response.data, function(err, result)
       {vm.clicks = cleanClickData(result.ListBucketResult.Contents);
       }));
-      /*
+
       var option = calendarToggleCounter%3;
-      vm.clicks.forEach(function (click) {
-        if (!isToggleCheckedBloodSugar) {
-          if (click.clickDetails == SINGLE) {delete clicks[click];}
-        };
-        if (!isToggleCheckedBloodSugar) {
-          if (click.clickDetails == DOUBLE) {delete clicks[click];}
-        };
-        if (!isToggleFeelingLow) {
-          if (click.clickDetails == LONG) { delete clicks[click];}
-        };
-
-        // Time scale toggle options are different here because people @ the
-        // the fair can only see that past clicks anyway
-        // Also theres gonna be a shitload of clicks
-
-        if (option == 0) { // Default show past 3 days
-          vm.clicks.delete(key);
-        } else if (option == 1) { // Show past hour
-          vm.clicks.delete(key);
-        } else { // Show past 30 mins
-          vm.clicks.delete(key);
-        };
+      var listLength = vm.clicks.length;
+      var today = new Date();
+      if (!isToggleCheckedBloodSugar) {
+        vm.clicks = vm.clicks.filter(click =>
+          (click.text == 'Jason delivered insulin') ||
+          (click.text == 'Jason is feeling low'));
       }
-      */
+      if (!isToggleDeliveredInsulin) {
+        vm.clicks = vm.clicks.filter(click =>
+          (click.text == 'Jason checked his blood sugar') ||
+          (click.text == 'Jason is feeling low'));
+      }
+      if (!isToggleFeelingLow) {
+        vm.clicks = vm.clicks.filter(click =>
+          (click.text == 'Jason delivered insulin') ||
+          (click.text == 'Jason checked his blood sugar'));
+      }
+      if (option == 1) { // Show past 2 hours
+        vm.clicks = vm.clicks.filter(click => (
+          (click.date.getHours() + click.date.getMinutes()/100) >=
+          ((today.getHours() - 2) + today.getMinutes()/100))
+        );
+      } else if (option == 2) { // Show past 30 mins
+        vm.clicks = vm.clicks.filter(click => (
+          ((click.date.getHours() == today.getHours()) && // Within the hour
+          (click.date.getMinutes() > today.getMinutes())) ||
+          ( ((click.date.getHours() - 1) == today.getHours()) &&  // In the last hour
+          ( (60 - click.date.getMinutes() + today.getMinutes) > 30)))
+        );
+      }
+
     },
     ToggleDeliveredInsulin: function() {isToggleDeliveredInsulin = !isToggleDeliveredInsulin;},
     ToggleCheckedBloodSugar: function() { isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;},
