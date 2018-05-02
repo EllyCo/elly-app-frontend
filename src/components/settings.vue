@@ -1,4 +1,4 @@
-<template>
+<template>    
 
   <div id="settings">
     <div class="container">
