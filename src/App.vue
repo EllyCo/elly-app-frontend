@@ -36,6 +36,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  padding-top: 70px;
+}
 </style>
 
 <!-- Bootstrap CSS -->

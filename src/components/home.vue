@@ -15,104 +15,14 @@
     <!-- Begin list-group button presses -->
     <div class="list-group">
         <ul class="list-group list-group-flush col-md-12">
-
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> {{info}}
+            <button v-for="click in clicks"
+                    v-bind:class="click.cssClass"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                <span v-bind:class="click.buttonCSS"
+                      class="fa pull-left"></span>
+                <small>{{ click.text }} at {{ click.date.getHours() % 12 }}:{{ click.date.getMinutes() }} </small>
             </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered his insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered his insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered his insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-delivered-insulin">
-                <span class="fa fa-check pull-left"></span> Eli delivered insulin
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-checked-blood-sugar">
-                <span class="fa fa-tint pull-left"></span> Eli checked his blood sugar
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-            <button type="button" class="list-group-item list-group-item-action btn-feeling-low">
-                <span class="fa fa-exclamation pull-left"></span> Eli feels low!
-            </button>
-
         </ul>
     </div>
     <!-- End list-group button presses -->
@@ -144,7 +54,7 @@
             <!-- Begin class time menu -->
             <div class="btn-group" style="width:25%">
                 <button type="button" class="btn bg-light" style="width:25%">
-                    <i class="far fa-calendar-alt fa-3x"></i>
+                    <i class="fa fa-calendar-alt fa-3x"></i>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Tablet</a></li>
                         <li><a href="#">Smartphone</a></li>
@@ -166,20 +76,73 @@
 
 <script>
 const axios = require('axios');
+const xml = require('xml2js');
+
+function createClickObject(click, datetime) {
+  var clickDetails = {
+    'SINGLE': {
+      css: 'btn-delivered-insulin',
+      buttonCSS: 'fa fa-tint',
+      text: 'Jason delivered insulin'
+    },
+    'DOUBLE': {
+      css: 'btn-checked-blood-sugar',
+      buttonCSS: 'fa fa-check',
+      text: 'Jason checked his blood sugar'
+    },
+    'LONG': {
+      css: 'btn-feeling-low',
+      buttonCSS: 'fa fa-exclamation',
+      text: 'Jason is feeling low'
+    }
+  }
+  var cleanedClick = click.split(/[ ,]+/)[0];
+
+  return {
+    click: cleanedClick,  // remove whitespace
+    date: new Date(datetime),
+    cssClass: clickDetails[cleanedClick].css,
+    text: clickDetails[cleanedClick].text,
+    buttonCSS: clickDetails[cleanedClick].buttonCSS
+  }
+};
+
+function cleanClickData(rawData) {
+  return rawData
+    .map(x => x.Key[0])
+    .map(x => x.split('@'))
+    .map(x => createClickObject(x[0], x[1]))
+    .sort(function(a,b){
+      return b.date - a.date
+    })
+};
 
 export default {
     name: 'home',
     data() {
         return {
-            info: null
+          clicks: null
         }
     },
     mounted () {
+      this.getClicks();
+
+      setInterval(function () {
+        this.getClicks();
+      }.bind(this), 500); // 500 milliseconds = 0.5 seconds
+    },
+    methods: {
+      getClicks: function () {
+      var vm = this;
       axios
-        .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-        .then(response => (this.info = response));
+        .get('https://elly-button-bucket.s3.amazonaws.com/')
+        .then(response => xml.parseString(response.data, function (err, result) {
+          vm.clicks = cleanClickData(result.ListBucketResult.Contents);
+        }))
+      }
     }
 }
+
 
 // function ToggleDeliveredInsulin() {
 // }
