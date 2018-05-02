@@ -105,10 +105,10 @@ function cleanClickData(rawData) {
       return b.date - a.date
     })
 };
-function ToggleDeliveredInsulin() {isToggleDeliveredInsulin = !isToggleDeliveredInsulin;},
-function ToggleCheckedBloodSugar() { isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;},
-function ToggleFeelingLow() { isToggleFeelingLow = !isToggleFeelingLow; },
-function ToggleCalendar() { calendarToggleCounter++; },
+function ToggleDeliveredInsulin() {isToggleDeliveredInsulin = !isToggleDeliveredInsulin;};
+function ToggleCheckedBloodSugar() { isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;};
+function ToggleFeelingLow() { isToggleFeelingLow = !isToggleFeelingLow; };
+function ToggleCalendar() { calendarToggleCounter++; };
 
 
 
