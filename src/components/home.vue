@@ -82,17 +82,17 @@ function createClickObject(click, datetime) {
   var clickDetails = {
     'SINGLE': {
       css: 'btn-delivered-insulin',
-      buttonCSS: 'fa fa-tint',
+      buttonCSS: 'fa-tint',
       text: 'Jason delivered insulin'
     },
     'DOUBLE': {
       css: 'btn-checked-blood-sugar',
-      buttonCSS: 'fa fa-check',
+      buttonCSS: 'fa-check',
       text: 'Jason checked his blood sugar'
     },
     'LONG': {
       css: 'btn-feeling-low',
-      buttonCSS: 'fa fa-exclamation',
+      buttonCSS: 'fa-exclamation',
       text: 'Jason is feeling low'
     }
   }
@@ -109,9 +109,9 @@ function createClickObject(click, datetime) {
 
 function cleanClickData(rawData) {
   return rawData
-    .map(x => x.Key[0])
-    .map(x => x.split('@'))
-    .map(x => createClickObject(x[0], x[1]))
+    .map(x => x.Key[0]) // parses the string
+    .map(x => x.split('@')) // split clickType and datetime
+    .map(x => createClickObject(x[0], x[1]))  // click, datetime --> JSON
     .sort(function(a,b){
       return b.date - a.date
     })
@@ -121,12 +121,13 @@ export default {
     name: 'home',
     data() {
         return {
-          clicks: null
+          clicks: null,
+          showSINGLE: true, // changed by button
+          showDOUBLE: true,
+          showLONG: true
         }
     },
     mounted () {
-      this.getClicks();
-
       setInterval(function () {
         this.getClicks();
       }.bind(this), 500); // 500 milliseconds = 0.5 seconds
