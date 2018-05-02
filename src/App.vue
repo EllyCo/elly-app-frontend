@@ -3,8 +3,9 @@
   <div id="app">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a href="/" class="navbar-brand">Elly</a>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+      <a href= "/" class="navbar-brand">Elly
+      </a>
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <router-link :to="{ name: 'settings', params: {} }">
@@ -34,6 +35,9 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body {
+  padding-top: 70px;
 }
 </style>
 

@@ -1,0 +1,145 @@
+.btn-delivered-insulin {
+  color: #000000;
+  background-color: #F0F6E4;
+  border-color: #FFFFFF;
+}
+
+.btn-delivered-insulin:hover,
+.btn-delivered-insulin:focus,
+.btn-delivered-insulin:active,
+.btn-delivered-insulin.active,
+.open .dropdown-toggle.btn-delivered-insulin {
+  color: #000000;
+  background-color: #99C24D;
+  border-color: #FFFFFF;
+}
+
+.btn-delivered-insulin:active,
+.btn-delivered-insulin.active,
+.open .dropdown-toggle.btn-delivered-insulin {
+  background-image: none;
+}
+
+.btn-delivered-insulin.disabled,
+.btn-delivered-insulin[disabled],
+fieldset[disabled] .btn-delivered-insulin,
+.btn-delivered-insulin.disabled:hover,
+.btn-delivered-insulin[disabled]:hover,
+fieldset[disabled] .btn-delivered-insulin:hover,
+.btn-delivered-insulin.disabled:focus,
+.btn-delivered-insulin[disabled]:focus,
+fieldset[disabled] .btn-delivered-insulin:focus,
+.btn-delivered-insulin.disabled:active,
+.btn-delivered-insulin[disabled]:active,
+fieldset[disabled] .btn-delivered-insulin:active,
+.btn-delivered-insulin.disabled.active,
+.btn-delivered-insulin[disabled].active,
+fieldset[disabled] .btn-delivered-insulin.active {
+  background-color: #F0F6E4;
+  border-color: #FFFFFF;
+}
+
+.btn-delivered-insulin .badge {
+  color: #F0F6E4;
+  background-color: #000000;
+}
+
+
+
+.btn-checked-blood-sugar {
+  color: #000000;
+  background-color: #D9E8EE;
+  border-color: #FFFFFF;
+}
+
+.btn-checked-blood-sugar:hover,
+.btn-checked-blood-sugar:focus,
+.btn-checked-blood-sugar:active,
+.btn-checked-blood-sugar.active,
+.open .dropdown-toggle.btn-checked-blood-sugar {
+  color: #000000;
+  background-color: #006E90;
+  border-color: #FFFFFF;
+}
+
+.btn-checked-blood-sugar:active,
+.btn-checked-blood-sugar.active,
+.open .dropdown-toggle.btn-checked-blood-sugar {
+  background-image: none;
+}
+
+.btn-checked-blood-sugar.disabled,
+.btn-checked-blood-sugar[disabled],
+fieldset[disabled] .btn-checked-blood-sugar,
+.btn-checked-blood-sugar.disabled:hover,
+.btn-checked-blood-sugar[disabled]:hover,
+fieldset[disabled] .btn-checked-blood-sugar:hover,
+.btn-checked-blood-sugar.disabled:focus,
+.btn-checked-blood-sugar[disabled]:focus,
+fieldset[disabled] .btn-checked-blood-sugar:focus,
+.btn-checked-blood-sugar.disabled:active,
+.btn-checked-blood-sugar[disabled]:active,
+fieldset[disabled] .btn-checked-blood-sugar:active,
+.btn-checked-blood-sugar.disabled.active,
+.btn-checked-blood-sugar[disabled].active,
+fieldset[disabled] .btn-checked-blood-sugar.active {
+  background-color: #D9E8EE;
+  border-color: #FFFFFF;
+}
+
+.btn-checked-blood-sugar .badge {
+  color: #D9E8EE;
+  background-color: #000000;
+}
+
+
+
+
+
+
+
+.btn-feeling-low {
+  color: #000000;
+  background-color: #FCE3C0;
+  border-color: #FFFFFF;
+}
+
+.btn-feeling-low:hover,
+.btn-feeling-low:focus,
+.btn-feeling-low:active,
+.btn-feeling-low.active,
+.open .dropdown-toggle.btn-feeling-low {
+  color: #000000;
+  background-color: #F18F01;
+  border-color: #FFFFFF;
+}
+
+.btn-feeling-low:active,
+.btn-feeling-low.active,
+.open .dropdown-toggle.btn-feeling-low {
+  background-image: none;
+}
+
+.btn-feeling-low.disabled,
+.btn-feeling-low[disabled],
+fieldset[disabled] .btn-feeling-low,
+.btn-feeling-low.disabled:hover,
+.btn-feeling-low[disabled]:hover,
+fieldset[disabled] .btn-feeling-low:hover,
+.btn-feeling-low.disabled:focus,
+.btn-feeling-low[disabled]:focus,
+fieldset[disabled] .btn-feeling-low:focus,
+.btn-feeling-low.disabled:active,
+.btn-feeling-low[disabled]:active,
+fieldset[disabled] .btn-feeling-low:active,
+.btn-feeling-low.disabled.active,
+.btn-feeling-low[disabled].active,
+fieldset[disabled] .btn-feeling-low.active {
+  background-color: #FCE3C0;
+  border-color: #FFFFFF;
+}
+
+.btn-feeling-low .badge {
+  color: #FCE3C0;
+  background-color: #000000;
+}
