@@ -115,59 +115,57 @@ export default {
       isToggleDeliveredInsulin: true,
       isToggleCheckedBloodSugar: true,
       isToggleFeelingLow: true,
-      calendarToggleCounter: 0
+      calendarToggleCounter: 0,
     }
   },
+
   mounted() {
     this.getClicks();
-
     setInterval(function() {
       this.getClicks();
     }.bind(this), 500); // 500 milliseconds = 0.5 seconds
   },
+
   methods: {
-    ToggleDeliveredInsulin: function() {
-      isToggleDeliveredInsulin = !isToggleDeliveredInsulin;
-    },
-    ToggleCheckedBloodSugar: function() {
-      isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;
-    },
-    ToggleFeelingLow: function() {
-      isToggleFeelingLow = !isToggleFeelingLow;
-    },
-    ToggleCalendar: function() {
-      calendarToggleCounter++;
-    },
     getClicks: function() {
       var vm = this;
       axios.get('https://elly-button-bucket.s3.amazonaws.com/')
       .then(response => xml.parseString(response.data, function(err, result)
       {vm.clicks = cleanClickData(result.ListBucketResult.Contents);
       }));
+      /*
+      var option = calendarToggleCounter%3;
       vm.clicks.forEach(function (click) {
         if (!isToggleCheckedBloodSugar) {
-          if (click.clickDetails == SINGLE) delete clicks[click];
-        }
+          if (click.clickDetails == SINGLE) {delete clicks[click];}
+        };
         if (!isToggleCheckedBloodSugar) {
-          if (click.clickDetails == DOUBLE) delete clicks[click];
-        }
+          if (click.clickDetails == DOUBLE) {delete clicks[click];}
+        };
         if (!isToggleFeelingLow) {
-          if (click.clickDetails == LONG) delete clicks[click];
-        }
-        var option = calendarToggleCounter%3;
+          if (click.clickDetails == LONG) { delete clicks[click];}
+        };
+
+        // Time scale toggle options are different here because people @ the
+        // the fair can only see that past clicks anyway
+        // Also theres gonna be a shitload of clicks
+
         if (option == 0) { // Default show past 3 days
-
+          vm.clicks.delete(key);
         } else if (option == 1) { // Show past hour
-
+          vm.clicks.delete(key);
         } else { // Show past 30 mins
-
-        }
+          vm.clicks.delete(key);
+        };
       }
-    }
-    // function ToggleDeliveredInsulin() {
-    // }
-    // function ToggleCheckedBloodSugar() {
-    // }
-    // function ToggleFeelingLow() {
-    // }
+      */
+    },
+    ToggleDeliveredInsulin: function() {isToggleDeliveredInsulin = !isToggleDeliveredInsulin;},
+    ToggleCheckedBloodSugar: function() { isToggleCheckedBloodSugar = !isToggleCheckedBloodSugar;},
+    ToggleFeelingLow: function() { isToggleFeelingLow = !isToggleFeelingLow; },
+    ToggleCalendar: function() { calendarToggleCounter++; },
+
+
+  }
+}
 </script>
